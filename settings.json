@@ -1,0 +1,15 @@
+{
+    "permissions": {
+        "allow": [],
+        "deny": []
+    },
+    "enabledPlugins": {
+        "orchestrator@kuckit": true
+    },
+    "language": "vietnamese",
+    "model": "claude-sonnet-4-5",
+    "env": {
+        "ANTHROPIC_BASE_URL": "http://127.0.0.1:8045",
+        "ANTHROPIC_API_KEY": "sk-17fe892adff64ae1a4d8bdcc96165cc2"
+    }
+}

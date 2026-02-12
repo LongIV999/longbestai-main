@@ -1,0 +1,11 @@
+{
+    "name": "longbestai-monorepo",
+    "private": true,
+    "packageManager": "pnpm@9.15.4",
+    "scripts": {
+        "dev": "pnpm -C apps/web dev",
+        "content:validate": "pnpm -C packages/content-ops validate",
+        "content:make": "pnpm -C packages/content-ops make",
+        "content:export-card": "pnpm -C packages/content-ops export-card"
+    }
+}
