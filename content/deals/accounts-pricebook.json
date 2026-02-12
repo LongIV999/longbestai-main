@@ -1,0 +1,79 @@
+{
+  "slug": "accounts-pricebook",
+  "title": "Bảng giá Accounts & Tools",
+  "price": "Liên hệ",
+  "tags": [
+    "accounts",
+    "tools",
+    "subscription",
+    "pricebook"
+  ],
+  "notes": "Tất cả accounts được verify, bảo hành theo tháng. Hỗ trợ đổi mới nếu lỗi.",
+  "items": [
+    {
+      "title": "CapCut Pro 12 tháng",
+      "duration": "12 tháng",
+      "cost": 350000,
+      "retail": 500000,
+      "inventory": 20,
+      "tags": [
+        "capcut",
+        "video",
+        "editing"
+      ],
+      "notes": "⚠️ QUAN TRỌNG: Chỉ dùng để export video, TUYỆT ĐỐI KHÔNG dùng livestream (sẽ bị ban account ngay lập tức)."
+    },
+    {
+      "title": "ChatGPT Plus",
+      "duration": "1 tháng",
+      "cost": 450000,
+      "retail": 600000,
+      "inventory": 15,
+      "tags": [
+        "chatgpt",
+        "ai",
+        "openai"
+      ],
+      "notes": "Access GPT-4, GPT-4 Turbo, DALL-E 3. Renew hàng tháng."
+    },
+    {
+      "title": "Canva Pro",
+      "duration": "1 tháng",
+      "cost": 100000,
+      "retail": 150000,
+      "inventory": 50,
+      "tags": [
+        "canva",
+        "design",
+        "graphics"
+      ],
+      "notes": "Full template library, background remover, brand kit."
+    },
+    {
+      "title": "Claude Pro (Anthropic)",
+      "duration": "1 tháng",
+      "cost": 450000,
+      "retail": 600000,
+      "inventory": 10,
+      "tags": [
+        "claude",
+        "ai",
+        "anthropic"
+      ],
+      "notes": "Access Claude Opus, Sonnet. Priority during high traffic."
+    },
+    {
+      "title": "Midjourney Standard",
+      "duration": "1 tháng",
+      "cost": 550000,
+      "retail": 700000,
+      "inventory": 8,
+      "tags": [
+        "midjourney",
+        "ai",
+        "image-generation"
+      ],
+      "notes": "15h Fast generations/month. Relax mode unlimited."
+    }
+  ]
+}

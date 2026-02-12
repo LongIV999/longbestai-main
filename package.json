@@ -3,9 +3,13 @@
     "private": true,
     "packageManager": "pnpm@9.15.4",
     "scripts": {
-        "dev": "pnpm -C apps/web dev",
-        "content:validate": "pnpm -C packages/content-ops validate",
-        "content:make": "pnpm -C packages/content-ops make",
-        "content:export-card": "pnpm -C packages/content-ops export-card"
+        "dev": "pnpm -C apps/web run dev",
+        "build": "pnpm -C apps/web run build",
+        "content:validate": "tsx packages/content-ops/bin/cli.ts validate",
+        "content:make": "tsx packages/content-ops/bin/cli.ts make",
+        "content:export-card": "tsx packages/content-ops/bin/cli.ts export-card"
+    },
+    "devDependencies": {
+        "tsx": "^4.19.2"
     }
 }

@@ -1,0 +1,18 @@
+{
+  "slug": "openclaw-la-gi",
+  "title": "OpenClaw là gì? Workflow automation cho mọi người",
+  "date": "2024-01-20T14:30:00.000Z",
+  "excerpt": "OpenClaw là công cụ workflow automation mã nguồn mở, giúp bạn tự động hóa các tác vụ lặp đi lặp lại, tích hợp AI, và xây dựng quy trình làm việc thông minh.",
+  "tags": [
+    "openclaw",
+    "workflow",
+    "automation",
+    "ai"
+  ],
+  "body": "OpenClaw là gì?\n\nOpenClaw là một workflow automation engine được thiết kế để giúp bạn tự động hóa mọi thứ - từ các tác vụ đơn giản đến quy trình phức tạp.\n\nĐặc điểm nổi bật:\n\n1. Visual workflow builder - Kéo thả để tạo workflow\n2. Tích hợp sẵn 200+ services (Google, Slack, Notion, v.v.)\n3. AI-powered nodes - Tích hợp ChatGPT, Claude, Gemini\n4. Self-hosted hoặc cloud - Bạn chọn cách deploy\n5. Mã nguồn mở - Minh bạch, an toàn\n\nUse cases phổ biến:\n\n- Tự động trả lời email khách hàng\n- Generate nội dung marketing tự động\n- Xử lý và phân loại dữ liệu\n- Monitor và alert tự động\n- Tích hợp giữa các hệ thống\n\nKiến trúc:\n\nOpenClaw sử dụng kiến trúc node-based, mỗi node thực hiện một nhiệm vụ cụ thể. Bạn kết nối các nodes lại để tạo thành workflow hoàn chỉnh.\n\nWorkflow có thể được trigger bởi:\n- Webhook\n- Schedule (cron)\n- Manual execution\n- Event từ services khác\n\nBắt đầu với OpenClaw:\n\n1. Đăng ký tài khoản tại platform của chúng tôi\n2. Tạo workflow đầu tiên\n3. Kết nối với các services bạn đang dùng\n4. Test và deploy\n\nChúng tôi cung cấp gói setup và training để bạn nhanh chóng làm chủ OpenClaw.\n\nĐặt hàng OpenClaw Setup ngay! Zalo 0903 469 888 hoặc tham gia nhóm https://zalo.me/g/uwawns336",
+  "suggestedVisuals": [
+    "openclaw-interface.png",
+    "workflow-example.png",
+    "architecture-diagram.svg"
+  ]
+}

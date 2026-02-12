@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "brand": "LongBestAI",
+    "date": "2024-01-25T09:00:00.000Z",
+    "content_type": "job"
+  },
+  "caption": "TUYỂN DỤNG AI AUTOMATION SPECIALIST\n\nYêu cầu:\n- Kinh nghiệm với AI tools (ChatGPT, Claude, Midjourney)\n- Biết automation platforms (n8n, Zapier, hoặc tương tự)\n- Tư duy logic, giải quyết vấn đề tốt\n- Tiếng Anh đọc hiểu technical docs\n\nƯu tiên:\n- Có kinh nghiệm OpenClaw/n8n\n- Biết Python/JavaScript\n- Làm việc remote OK\n\nQuyền lợi:\n- Lương: 15-25 triệu (nego theo năng lực)\n- Remote-friendly, flexible hours\n- Training AI tools miễn phí\n- Team trẻ, năng động\n\nỨng tuyển ngay! Zalo 0903 469 888 hoặc tham gia nhóm https://zalo.me/g/uwawns336",
+  "render": {
+    "preset": "job-card-v1",
+    "theme": "bridge-brutal",
+    "card": {
+      "background": "#00F0F0",
+      "width": 1080,
+      "height": 1080
+    }
+  },
+  "overlay": [
+    {
+      "type": "stickerRect",
+      "x": 100,
+      "y": 80,
+      "width": 350,
+      "height": 100,
+      "text": "TUYỂN DỤNG",
+      "color": "#000000",
+      "rotation": -3
+    },
+    {
+      "type": "highlightScribble",
+      "x": 120,
+      "y": 420,
+      "width": 400,
+      "height": 45,
+      "color": "#B6FF00"
+    },
+    {
+      "type": "arrow",
+      "x1": 850,
+      "y1": 300,
+      "x2": 750,
+      "y2": 400,
+      "color": "#000000",
+      "strokeWidth": 4
+    },
+    {
+      "type": "icon",
+      "x": 880,
+      "y": 250,
+      "iconName": "star",
+      "size": 60,
+      "color": "#B6FF00"
+    }
+  ]
+}

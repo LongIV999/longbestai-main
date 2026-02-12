@@ -1,0 +1,32 @@
+{
+  "slug": "openclaw-basics",
+  "title": "OpenClaw Basics - Khóa học cơ bản",
+  "level": "beginner",
+  "outcome": [
+    "Hiểu rõ kiến trúc và các khái niệm cơ bản của OpenClaw",
+    "Tạo được workflow automation đầu tiên",
+    "Tích hợp OpenClaw với các services phổ biến",
+    "Debug và optimize workflows hiệu quả",
+    "Deploy workflows lên production một cách an toàn"
+  ],
+  "lessons": [
+    {
+      "title": "Giới thiệu OpenClaw",
+      "summary": "Tìm hiểu kiến trúc workflow automation, các khái niệm cơ bản: nodes, connections, triggers, credentials. So sánh OpenClaw với các tools khác."
+    },
+    {
+      "title": "Setup môi trường",
+      "summary": "Cài đặt OpenClaw (self-hosted hoặc cloud), cấu hình database, environment variables, và credentials cho các services."
+    },
+    {
+      "title": "Workflow đầu tiên",
+      "summary": "Xây dựng workflow automation đơn giản: trigger từ webhook, xử lý data, gọi API, gửi notification. Thực hành với use case thực tế."
+    },
+    {
+      "title": "Integration & Deploy",
+      "summary": "Tích hợp với Google Sheets, Slack, Notion. Best practices cho production: error handling, logging, monitoring, security."
+    }
+  ],
+  "price": "Free",
+  "notes": "Khóa học miễn phí cho khách hàng đăng ký gói OpenClaw Standard trở lên. Thời lượng: 4 sessions x 2h, online qua Zoom. Tặng kèm tài liệu và workflow templates."
+}
