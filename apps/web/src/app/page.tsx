@@ -8,6 +8,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export default function Home() {
   return (
@@ -19,16 +20,18 @@ export default function Home() {
             <h1 className="text-3xl font-bold">Long Best AI</h1>
             <p className="text-muted-foreground">Shadcn/ui Component Showcase</p>
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline">Settings</Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>Theme (Coming soon)</DropdownMenuItem>
-              <DropdownMenuItem>Language</DropdownMenuItem>
-              <DropdownMenuItem>About</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <div className="flex gap-2">
+            <ThemeSwitcher />
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline">Settings</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>Language</DropdownMenuItem>
+                <DropdownMenuItem>About</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
 
         {/* Card with Badges */}
