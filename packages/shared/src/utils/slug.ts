@@ -1,4 +1,4 @@
-import { removeDiacritics } from './vietnamese-diacritics.js';
+import { removeDiacritics } from './vietnamese-diacritics';
 
 /**
  * Generate URL-safe slug from Vietnamese or English text

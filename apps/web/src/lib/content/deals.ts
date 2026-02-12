@@ -1,8 +1,6 @@
-import fs from 'fs';
-import path from 'path';
 import { dealSchema, type Deal } from '@longbestai/shared';
+import contentBundle from './.generated/content-bundle.json';
 
-const DEALS_DIR = path.join(process.cwd(), '../../content/deals');
 let dealsCache: Deal[] | null = null;
 
 /**
@@ -13,11 +11,8 @@ export function getAllDeals(): Deal[] {
     return dealsCache;
   }
 
-  const files = fs.readdirSync(DEALS_DIR).filter(f => f.endsWith('.json'));
-  const deals = files.map(file => {
-    const content = JSON.parse(fs.readFileSync(path.join(DEALS_DIR, file), 'utf-8'));
-    return dealSchema.parse(content);
-  });
+  // Load from pre-generated bundle and validate
+  const deals = contentBundle.deals.map(d => dealSchema.parse(d));
 
   deals.sort((a, b) => a.title.localeCompare(b.title));
 

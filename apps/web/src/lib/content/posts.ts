@@ -1,8 +1,6 @@
-import fs from 'fs';
-import path from 'path';
 import { postSchema, type Post } from '@longbestai/shared';
+import contentBundle from './.generated/content-bundle.json';
 
-const POSTS_DIR = path.join(process.cwd(), '../../content/posts');
 let postsCache: Post[] | null = null;
 
 /**
@@ -14,12 +12,8 @@ export function getAllPosts(): Post[] {
     return postsCache;
   }
 
-  // Read and validate JSON files
-  const files = fs.readdirSync(POSTS_DIR).filter(f => f.endsWith('.json'));
-  const posts = files.map(file => {
-    const content = JSON.parse(fs.readFileSync(path.join(POSTS_DIR, file), 'utf-8'));
-    return postSchema.parse(content);
-  });
+  // Load from pre-generated bundle and validate
+  const posts = contentBundle.posts.map(p => postSchema.parse(p));
 
   // Sort by date descending
   posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

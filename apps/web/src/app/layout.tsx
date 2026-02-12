@@ -14,8 +14,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Long Best AI",
-  description: "AI-powered content operations platform",
+  metadataBase: new URL('https://longbestai.com'),
+  title: {
+    default: 'LongBestAI - AI Learning & Resources',
+    template: '%s | LongBestAI',
+  },
+  description: 'Nền tảng học AI, khóa học, deals và cơ hội việc làm',
+  keywords: ['AI', 'Machine Learning', 'Automation', 'OpenClaw'],
+
+  openGraph: {
+    type: 'website',
+    locale: 'vi_VN',
+    url: 'https://longbestai.com',
+    siteName: 'LongBestAI',
+    title: 'LongBestAI - AI Learning & Resources',
+    description: 'Nền tảng học AI, khóa học, deals và cơ hội việc làm',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'LongBestAI',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LongBestAI',
+    description: 'Nền tảng học AI, khóa học, deals và cơ hội việc làm',
+    images: ['/og-image.png'],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

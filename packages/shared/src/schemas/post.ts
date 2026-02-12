@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { isValidSlug } from '../utils/slug.js';
+import { isValidSlug } from '../utils/slug';
 
 /**
  * Blog post schema

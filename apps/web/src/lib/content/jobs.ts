@@ -1,9 +1,8 @@
-import fs from 'fs';
-import path from 'path';
 import { jobSchema, type Job } from '@longbestai/shared';
+import contentBundle from './.generated/content-bundle.json';
 
-const JOBS_DIR = path.join(process.cwd(), '../../content/jobs');
 let jobsCache: Job[] | null = null;
+let filenamesCache: string[] | null = null;
 
 /**
  * Get all jobs, sorted by date descending
@@ -13,11 +12,8 @@ export function getAllJobs(): Job[] {
     return jobsCache;
   }
 
-  const files = fs.readdirSync(JOBS_DIR).filter(f => f.endsWith('.json'));
-  const jobs = files.map(file => {
-    const content = JSON.parse(fs.readFileSync(path.join(JOBS_DIR, file), 'utf-8'));
-    return jobSchema.parse(content);
-  });
+  // Load from pre-generated bundle and validate
+  const jobs = Object.values(contentBundle.jobs).map(j => jobSchema.parse(j));
 
   jobs.sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
 
@@ -32,32 +28,36 @@ export function getAllJobs(): Job[] {
  * Get job filename by index (for routing)
  */
 export function getJobFilename(index: number): string | null {
-  const files = fs.readdirSync(JOBS_DIR)
-    .filter(f => f.endsWith('.json'))
-    .sort();
-
-  return files[index]?.replace('.json', '') || null;
+  const filenames = getAllJobFilenames();
+  return filenames[index] || null;
 }
 
 /**
  * Get a single job by filename
  */
 export function getJobByFilename(filename: string): Job | null {
-  const filePath = path.join(JOBS_DIR, `${filename}.json`);
+  const jobData = (contentBundle.jobs as Record<string, unknown>)[filename];
 
-  if (!fs.existsSync(filePath)) {
+  if (!jobData) {
     return null;
   }
 
-  const content = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-  return jobSchema.parse(content);
+  return jobSchema.parse(jobData);
 }
 
 /**
  * Get all job filenames (for generateStaticParams)
  */
 export function getAllJobFilenames(): string[] {
-  return fs.readdirSync(JOBS_DIR)
-    .filter(f => f.endsWith('.json'))
-    .map(f => f.replace('.json', ''));
+  if (process.env.NODE_ENV === 'production' && filenamesCache) {
+    return filenamesCache;
+  }
+
+  const filenames = Object.keys(contentBundle.jobs).sort();
+
+  if (process.env.NODE_ENV === 'production') {
+    filenamesCache = filenames;
+  }
+
+  return filenames;
 }

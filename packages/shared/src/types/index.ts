@@ -9,4 +9,4 @@ export type {
   JobMeta,
   JobRender,
   JobOverlayItem
-} from '../schemas/index.js';
+} from '../schemas/index';

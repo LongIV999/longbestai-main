@@ -1,8 +1,6 @@
-import fs from 'fs';
-import path from 'path';
 import { courseSchema, type Course } from '@longbestai/shared';
+import contentBundle from './.generated/content-bundle.json';
 
-const COURSES_DIR = path.join(process.cwd(), '../../content/courses');
 let coursesCache: Course[] | null = null;
 
 /**
@@ -13,11 +11,8 @@ export function getAllCourses(): Course[] {
     return coursesCache;
   }
 
-  const files = fs.readdirSync(COURSES_DIR).filter(f => f.endsWith('.json'));
-  const courses = files.map(file => {
-    const content = JSON.parse(fs.readFileSync(path.join(COURSES_DIR, file), 'utf-8'));
-    return courseSchema.parse(content);
-  });
+  // Load from pre-generated bundle and validate
+  const courses = contentBundle.courses.map(c => courseSchema.parse(c));
 
   courses.sort((a, b) => a.title.localeCompare(b.title));
 
