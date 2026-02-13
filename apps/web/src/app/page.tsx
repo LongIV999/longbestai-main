@@ -9,10 +9,12 @@ import {
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 import { ThemeSwitcher } from "@/components/theme-switcher";
+import { LeadCaptureCta } from "@/components/lead-capture-cta";
+import { AntiScamNotice } from "@/components/anti-scam-notice";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 bg-background">
+    <main className="min-h-screen p-8 pb-24 bg-background">
       <div className="max-w-4xl mx-auto space-y-8">
         {/* Header Section */}
         <div className="flex items-center justify-between">
@@ -109,6 +111,12 @@ export default function Home() {
             </Card>
           </TabsContent>
         </Tabs>
+
+        {/* Lead Capture CTA Banner */}
+        <LeadCaptureCta variant="banner" />
+
+        {/* Anti-Scam Notice */}
+        <AntiScamNotice />
       </div>
     </main>
   );

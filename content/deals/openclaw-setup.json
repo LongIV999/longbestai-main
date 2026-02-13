@@ -1,38 +1,35 @@
 {
   "slug": "openclaw-setup",
-  "title": "OpenClaw Setup Package - 3 Tiers",
-  "price": "Liên hệ",
+  "title": "OpenClaw Setup & Support - Promo 50% Setup",
+  "price": "3 gói tùy chọn",
   "tags": [
     "openclaw",
     "setup",
     "automation",
-    "package"
+    "promo"
   ],
-  "notes": "SLA 99.5% uptime. Overage pricing: 500k/1000 requests vượt quota. Hỗ trợ technical 24/7 qua Zalo.",
+  "notes": "🎉 PROMO: 50% OFF phí setup cho 25 khách đầu tiên (kết thúc khi group đạt 100 members)\n\n✅ 7-day 100% refund cho phí setup\n✅ SLA 99.5% uptime\n✅ Hỗ trợ technical 24/7 qua Zalo\n\n⚠️ OVERAGE POLICY:\n• Vượt quota: 100k/giờ hoặc 200k/buổi (1 buổi = 2 giờ)\n• Quy tắc làm tròn: Làm tròn xuống (floor)\n• Ví dụ 1: Gói Lite vượt 1.8 giờ → tính 1 giờ × 100k = 100k\n• Ví dụ 2: Gói Standard vượt 3.5 giờ → tính 3 giờ × 100k = 300k (hoặc 1 buổi × 200k = 200k, chọn rẻ hơn)",
   "items": [
     {
       "title": "OpenClaw Lite",
-      "duration": "1 tháng",
-      "cost": 3500000,
-      "retail": 5000000,
-      "inventory": 10,
-      "notes": "Phù hợp cho cá nhân và startup. Quota: 10,000 requests/tháng."
+      "retail": 600000,
+      "cost": 1200000,
+      "duration": "390k/tháng",
+      "notes": "Phù hợp cho cá nhân và startup nhỏ"
     },
     {
       "title": "OpenClaw Standard",
-      "duration": "3 tháng",
-      "cost": 9000000,
-      "retail": 12000000,
-      "inventory": 5,
-      "notes": "Phù hợp cho SME. Quota: 50,000 requests/tháng. Bao gồm training 2 sessions."
+      "retail": 900000,
+      "cost": 1800000,
+      "duration": "690k/tháng",
+      "notes": "Phù hợp cho SME và team nhỏ"
     },
     {
       "title": "OpenClaw Pro",
-      "duration": "1 năm",
-      "cost": 35000000,
-      "retail": 40000000,
-      "inventory": 3,
-      "notes": "Phù hợp cho enterprise. Quota: 200,000 requests/tháng. Priority support + dedicated training."
+      "retail": 1250000,
+      "cost": 2500000,
+      "duration": "990k/tháng",
+      "notes": "Phù hợp cho enterprise và scale-up"
     }
   ]
 }

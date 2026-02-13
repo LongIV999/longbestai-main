@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import { getDealBySlug, getAllDealSlugs } from '@/lib/content/deals';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { LeadCaptureCta } from '@/components/lead-capture-cta';
+import { AntiScamNotice } from '@/components/anti-scam-notice';
 import type { DealItem } from '@longbestai/shared';
 
 export async function generateStaticParams() {
@@ -33,7 +35,7 @@ export default async function DealPage({ params }: { params: Promise<{ slug: str
     : deal.price;
 
   return (
-    <div className="container mx-auto px-4 py-16 max-w-4xl">
+    <div className="container mx-auto px-4 py-16 pb-24 max-w-4xl space-y-8">
       <h1 className="text-4xl font-bold mb-4">{deal.title}</h1>
 
       <div className="flex flex-wrap gap-2 mb-8">
@@ -52,29 +54,36 @@ export default async function DealPage({ params }: { params: Promise<{ slug: str
           {deal.items.map((item: DealItem, idx: number) => (
             <Card key={idx}>
               <CardHeader>
-                <CardTitle className="flex items-center justify-between">
+                <CardTitle className="flex items-center justify-between flex-wrap gap-2">
                   <span>{item.title}</span>
-                  {item.retail && (
-                    <span className="text-lg">
-                      {typeof item.retail === 'number'
-                        ? `${item.retail.toLocaleString('vi-VN')}đ`
-                        : item.retail}
-                    </span>
-                  )}
+                  <div className="flex items-center gap-2">
+                    {item.cost && (
+                      <span className="text-sm text-muted-foreground line-through">
+                        {typeof item.cost === 'number'
+                          ? `${item.cost.toLocaleString('vi-VN')}đ`
+                          : item.cost}
+                      </span>
+                    )}
+                    {item.retail && (
+                      <span className="text-lg font-bold text-primary">
+                        {typeof item.retail === 'number'
+                          ? `${item.retail.toLocaleString('vi-VN')}đ`
+                          : item.retail}
+                      </span>
+                    )}
+                    {item.cost && item.retail && (
+                      <Badge variant="destructive" className="ml-1">
+                        -50%
+                      </Badge>
+                    )}
+                  </div>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-2">
                 {item.duration && (
                   <p className="text-sm">
-                    <span className="font-semibold">Thời hạn:</span> {item.duration}
-                  </p>
-                )}
-                {item.cost && (
-                  <p className="text-sm">
-                    <span className="font-semibold">Giá gốc:</span>{' '}
-                    {typeof item.cost === 'number'
-                      ? `${item.cost.toLocaleString('vi-VN')}đ`
-                      : item.cost}
+                    <span className="font-semibold">Phí duy trì:</span>{' '}
+                    <span className="text-primary font-semibold">{item.duration}</span>
                   </p>
                 )}
                 {item.warranty && (
@@ -126,11 +135,19 @@ export default async function DealPage({ params }: { params: Promise<{ slug: str
       )}
 
       {deal.notes && (
-        <div className="mt-8 p-6 bg-muted rounded-lg">
+        <div className="p-6 bg-muted rounded-lg">
           <h3 className="font-semibold mb-2">Lưu ý</h3>
           <p className="text-sm whitespace-pre-wrap">{deal.notes}</p>
         </div>
       )}
+
+      {/* Lead Capture CTA Button */}
+      <div className="flex justify-center">
+        <LeadCaptureCta variant="button" text="Đăng ký tư vấn miễn phí ngay" />
+      </div>
+
+      {/* Anti-Scam Notice */}
+      <AntiScamNotice />
     </div>
   );
 }
