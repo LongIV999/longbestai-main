@@ -5,6 +5,9 @@
     "compatibility_flags": [
         "nodejs_compat"
     ],
+    "vars": {
+        "NEXT_PUBLIC_INTAKE_URL": "https://docs.google.com/forms/d/e/1FAIpQLSeOGQhzk5dUbEmMz60okSjhsSOcDk4Gzc01tvhzE66qXsRLpw/viewform?usp=sharing&ouid=111127283146019140255"
+    },
     "assets": {
         "directory": ".open-next/assets",
         "binding": "ASSETS"
